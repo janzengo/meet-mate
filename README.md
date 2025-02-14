@@ -27,10 +27,7 @@ MeetMate is a lightweight browser extension that helps you save, organize, and q
 ## Usage
 
 ### Quick Demo
-<video width="100%" controls>
-  <source src="assets/videos/meetmate-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![screen-capture](https://github.com/user-attachments/assets/eba59299-2eeb-4e62-84d5-cec093c4ab05)
 
 ### Step-by-Step Guide
 1. Click the MeetMate extension icon
@@ -56,5 +53,6 @@ MeetMate is a lightweight browser extension that helps you save, organize, and q
 ## Privacy
 - No tracking or data collection
 - All data stays in your browser
+
 
 Thank you!
