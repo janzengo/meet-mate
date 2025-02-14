@@ -9,7 +9,7 @@ MeetMate is a lightweight browser extension that helps you save, organize, and q
 - One-click access to meetings
 - Secure, local storage (no data tracking or external servers)
 
-## 🚀 Installation
+## Installation
 
 ### Users
 1. Install from the Chrome Web Store or Edge Add-ons store (links coming soon)
