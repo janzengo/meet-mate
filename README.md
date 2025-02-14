@@ -25,6 +25,14 @@ MeetMate is a lightweight browser extension that helps you save, organize, and q
 4. Click "Load unpacked" and select the project folder
 
 ## Usage
+
+### Quick Demo
+<video width="100%" controls>
+  <source src="assets/videos/meetmate-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Step-by-Step Guide
 1. Click the MeetMate extension icon
 2. Add new meetings by entering a name and pasting the link
 3. Click a saved link to join, copy, or delete with confirmation
