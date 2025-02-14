@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "MeetMate",
+  "version": "1.0.0",
+  "description": "Save and manage your Google Meet links for quick access. Organize your virtual meetings efficiently with a clean, modern interface.",
+  "author": "Janzen Go",
+  "homepage_url": "https://github.com/janzengo/meet-mate",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://meet.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "minimum_chrome_version": "88",
+  "offline_enabled": true,
+  "short_name": "MeetMate"
+}

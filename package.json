@@ -1,0 +1,27 @@
+{
+  "name": "meetmate",
+  "version": "1.0.0",
+  "description": "A browser extension that helps you organize and quickly access your Google Meet links",
+  "scripts": {
+    "build": "powershell -File build.ps1",
+    "clean": "powershell Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue; mkdir dist",
+    "package": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janzengo/meet-mate.git"
+  },
+  "keywords": [
+    "google-meet",
+    "chrome-extension",
+    "edge-extension",
+    "meeting-manager",
+    "productivity"
+  ],
+  "author": "Janzen Go",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janzengo/meet-mate/issues"
+  },
+  "homepage": "https://github.com/janzengo/meet-mate#readme"
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeetMate - Google Meet Manager</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <img src="icons/icon128.png" alt="MeetMate Logo" class="header-icon" width="28" height="28">
+        MeetMate!
+      </h1>
+    </header>
+
+    <main>
+      <nav class="tabs" role="tablist">
+        <button id="add-tab" class="tab-btn active" role="tab" aria-selected="true" aria-controls="add-panel">
+          <span class="material-icons" aria-hidden="true">add_circle</span>
+          Add Meeting
+        </button>
+        <button id="saved-tab" class="tab-btn" role="tab" aria-selected="false" aria-controls="saved-panel">
+          <span class="material-icons" aria-hidden="true">list</span>
+          Saved Meetings
+        </button>
+      </nav>
+
+      <div id="add-panel" class="tab-panel active" role="tabpanel" aria-labelledby="add-tab">
+        <section class="meetings-form" aria-labelledby="form-title">
+          <h2 id="form-title" class="section-title">Add New Meeting</h2>
+          <form id="meeting-form">
+            <div class="form-group">
+              <label for="meetingName">
+                <span class="material-icons" aria-hidden="true">label</span>
+                Meeting Name
+              </label>
+              <input 
+                type="text" 
+                id="meetingName" 
+                name="meetingName"
+                placeholder="Enter meeting name"
+                required
+                autocomplete="off"
+                aria-describedby="name-hint"
+              >
+              <span id="name-hint" class="visually-hidden">Enter a descriptive name for your meeting</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="meetingLink">
+                <span class="material-icons" aria-hidden="true">link</span>
+                Meeting Link
+              </label>
+              <input 
+                type="url" 
+                id="meetingLink" 
+                name="meetingLink"
+                placeholder="Paste Google Meet link"
+                required
+                pattern="https://meet.google.com/.*"
+                aria-describedby="link-hint"
+              >
+              <span id="link-hint" class="visually-hidden">Paste a valid Google Meet URL starting with https://meet.google.com/</span>
+            </div>
+
+            <button type="submit" id="saveMeeting" class="primary-button">
+              <span class="material-icons" aria-hidden="true">add</span>
+              Save Meeting
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <div id="saved-panel" class="tab-panel" role="tabpanel" aria-labelledby="saved-tab">
+        <section class="meetings-form" aria-labelledby="list-title">
+          <h2 id="list-title" class="section-title">Saved Meetings</h2>
+          <div id="meetings-list" class="meetings-list" role="list">
+            <!-- Empty state message will be shown here when no meetings -->
+            <div class="empty-state">
+              <span class="material-icons">event_busy</span>
+              <p>No saved meetings yet</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="notifications" class="notifications" aria-live="polite"></div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="modal-title" class="modal-title">
+            <span class="material-icons">warning</span>
+            Confirm Deletion
+          </h3>
+        </div>
+        <div class="modal-content">
+          <p>Are you sure you want to delete this meeting?</p>
+          <p class="meeting-to-delete"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="secondary-button" id="cancel-delete">
+            <span class="material-icons">close</span>
+            Cancel
+          </button>
+          <button class="primary-button delete-confirm" id="confirm-delete">
+            <span class="material-icons">delete</span>
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="version">v1.0.0 — <a href="https://www.github.com/janzengo" target="_blank" rel="noopener noreferrer">JJRG</a></div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
